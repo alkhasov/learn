@@ -1,0 +1,12 @@
+{
+  "name": "js-games",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Maga Alkhasov <account@musewick.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1"
+  }
+}
