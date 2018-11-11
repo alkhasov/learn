@@ -44,10 +44,16 @@ let cat = {
   isSleeping: false,
   lifeLog: [],
   owner: "",
-  meow: function(date) {
+  meow: function() {
     this.loveToOwner += 1;
     this.lifeLog.push({ date: now(), action: "Meow" });
     console.log("Meow-meow-meow!");
+    return this.loveToOwner;
+  },
+  stroke: function() {
+    this.loveToOwner += 1;
+    this.lifeLog.push({ date: now(), action: "Some stroking" });
+    console.log("Murrrrr..");
     return this.loveToOwner;
   },
   fish: function() {
@@ -85,3 +91,23 @@ const newCat = (name, color, owner) => {
   cat.lifeLog.push({ date: now(), action: `Meet with ${owner}` });
   return `${name} is born!`;
 };
+
+function newLogLine(content) {
+  let log = document.createElement("li");
+  log.className = "log";
+  log.innerHTML = content;
+  return log;
+}
+
+function printLog() {
+  let logList = document.createElement("ol");
+  logList.className = "log-list";
+  document.body.appendChild(logList);
+
+  for (let i = 0; i < cat.lifeLog.length; i++) {
+    let content = cat.lifeLog[i].action + " at " + cat.lifeLog[i].date;
+    let log = newLogLine(content);
+    document.querySelector(".log-list").appendChild(log);
+  }
+  return "Log printed!";
+}
