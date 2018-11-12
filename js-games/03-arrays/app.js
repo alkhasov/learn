@@ -43,7 +43,7 @@ let trainingHoursOverall = 0;
 pokemonsTwo.forEach(pokemon => (trainingHoursOverall += pokemon.trainingHours));
 console.log(trainingHoursOverall);
 
-// xo game
+// tic-tac-toe game
 
 let game = {
   map: [],
@@ -56,7 +56,7 @@ let game = {
     if (a != "" && b != "" && a != undefined && b != undefined && a != b) {
       this.player1 = a;
       this.player2 = b;
-      yellowLog(`Welcome ${a} and ${b}, let's play!`);
+      yellowLog(`Welcome ${a} and ${b}!`);
       this.whoseTurn = "noone";
       console.log(`${this.refresh()} play first!`);
     } else {
@@ -68,8 +68,10 @@ let game = {
 
   printMap: function() {
     if (this.whoseTurn != "") {
-      this.map.forEach(row => console.log(row.join(" ")));
-      console.log(this.whoseTurn, "now your turn!");
+      let print = "";
+      this.map.forEach(row => (print = print + row.join(" ") + "\n"));
+      console.log(print);
+      console.log(`${this.whoseTurn}, now your turn!`);
     } else {
       yellowLog("Create new game before print the map.");
     }
@@ -95,6 +97,8 @@ let game = {
   },
 
   turn: function(a, b) {
+    a -= 1;
+    b -= 1;
     if (this.whoseTurn != "") {
       if (a == undefined || b == undefined) {
         yellowLog(
@@ -103,16 +107,70 @@ let game = {
         return 0;
       }
       if (this.whoseTurn == this.player1) {
-        this.map[a - 1][b - 1] = "x";
-        this.whoseTurn = this.player2;
-        this.printMap();
+        if (this.map[a][b] == "o") {
+          return console.log("Wrong turn, cell is occupied");
+        } else {
+          this.map[a][b] = "x";
+          this.whoseTurn = this.player2;
+          this.printMap();
+          this.checkWinner();
+        }
       } else {
-        this.map[a - 1][b - 1] = "o";
-        this.whoseTurn = this.player1;
-        this.printMap();
+        if (this.map[a][b] == "x") {
+          return console.log("Wrong turn, cell is occupied");
+        } else {
+          this.map[a][b] = "o";
+          this.whoseTurn = this.player1;
+          this.printMap();
+          this.checkWinner();
+        }
       }
     } else {
       yellowLog("Create new game before the turn.");
     }
+  },
+
+  checkWinner: function() {
+    if (this.whoseTurn == "") {
+      return yellowLog("Create new game before the check winner.");
+    }
+
+    let map = this.map;
+    let player1 = this.player1;
+    let player2 = this.player2;
+    let winner = "";
+
+    for (var i = 0; i < 3; i++) {
+      var row = "";
+      var col = "";
+      for (var j = 0; j < 3; j++) {
+        row += map[i][j];
+        col += map[j][i];
+      }
+      if (row === "xxx" || col === "xxx") {
+        winner = player1;
+      } else if (row === "ooo" || col === "ooo") {
+        winner = player2;
+      }
+    }
+
+    if (
+      map[0][0] + map[1][1] + map[2][2] === "xxx" ||
+      map[2][0] + map[1][1] + map[0][2] === "xxx"
+    ) {
+      winner = player1;
+    } else if (
+      map[0][0] + map[1][1] + map[2][2] === "ooo" ||
+      map[2][0] + map[1][1] + map[0][2] === "ooo"
+    ) {
+      winner = player2;
+    }
+
+    if (winner != "") {
+      yellowLog(`${winner}, win! Congrats!`);
+      this.whoseTurn = "";
+    }
   }
 };
+
+// ["o", "x", "x"], ["-", "o", "o"], ["x", "x", "o"]
