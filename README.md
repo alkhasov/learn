@@ -12,7 +12,7 @@ Like in previous step, I know something about how play with functions (classic o
 
 #### 02 ¬ Objects
 
-Clear new entity, and oh yes, I love opportunities of objects. Write cat life simulator (1/10) with logging actions and printing log into DOM. Get a cat, say meow, feed, stroke, feel happy. (But actually, I like dogs)
+Clear new entity, and oh yes, I love opportunities of objects. Write the cat life simulator (1/10) with log of actions and print life log features into DOM. Get a cat, say meow, feed, stroke, feel happy. (But actually, I like dogs)
 
 #### 03 ¬ Arrays
 
@@ -20,7 +20,7 @@ Little bit closely learned arrays and default array methods. I hope my way to us
 
 #### 04 ¬ Challage #1
 
-I found JS exercises on HTML Academy website, which is good education project for beginners in web development, maybe the best in russian. So, a not a long thinking, I challenge myself to do all easy and middle exercises on it, and maybe some hard one if I understand they will not claim much time. I'm start right now (after commit this announce actually)
+I found JS exercises on HTML Academy website, which is good education project for beginners in web development, maybe the best in russian. So, a not a long thinking, I challenge myself to do all easy and medium level exercises on it, and maybe some hard one if I understand they will not claim much time. On the first evening I completed 3 of 7 chapters, which contained 56 theoretical exercises and 22 practical. Now become second evening and I continue clicking on keyboard.
 
 ## Wanna do
 

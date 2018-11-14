@@ -4,9 +4,9 @@ var browserSync = require("browser-sync").create();
 gulp.task("watch", function() {
   browserSync.init({
     server: {
-      baseDir: "js-games"
+      baseDir: "javascript"
     }
   });
 
-  gulp.watch("js-games/**/*").on("change", browserSync.reload);
+  gulp.watch("javascript/**/*").on("change", browserSync.reload);
 });
