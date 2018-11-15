@@ -20,7 +20,7 @@ Little bit closely learned arrays and default array methods. I hope my way to us
 
 #### 04 ¬ Challage #1
 
-I found JS exercises on HTML Academy website, which is good education project for beginners in web development, maybe the best in russian. So, a not a long thinking, I challenge myself to do all easy and medium level exercises on it, and maybe some hard one if I understand they will not claim much time. On the first evening I completed 3 of 7 chapters, which contained 56 theoretical exercises and 22 practical. Now become second evening and I continue clicking on keyboard.
+I found JS exercises on HTML Academy website, which is good education project for beginners in web development, maybe the best in russian. So, a not a long thinking, I challenge myself to do all easy and medium level exercises on it, and maybe some hard one if I understand they will not claim much time. On the first evening I completed 3 of 7 chapters, which contained 56 theoretical exercises and 22 practical. On the second evening I completed next 4 and 5 chapters, which contained 50 theoretical exercises and 14 practical (just two about functions :C)
 
 ## Wanna do
 
