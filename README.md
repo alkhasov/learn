@@ -4,7 +4,7 @@
 
 #### 00 ¬ Variables
 
-I already know how to work with variables in JS, but now I meet with new way and see the difference between `var` , `let` and `const`;
+I already know how to work with variables in JS, but now I met with new way and see the difference between `var` , `let` and `const`;
 
 #### 01 ¬ Functions
 
@@ -18,7 +18,7 @@ Clear new entity, and oh yes, I love opportunities of objects. Write the cat lif
 
 Little bit closely learned arrays and default array methods. I hope my way to use objects isn't a bad pattern, because I wrote sort of tic-tac-toe game just use only one object which contain all game functionality and params in it. Checking winner works too!
 
-#### 04 ¬ Challage #1
+#### 04 ¬ Challenge #1
 
 I found JS exercises (actually it is JavaScript Basics course) on HTML Academy website, which is good education project for beginners in web development, maybe the best in russian. So, a not a long thinking, I challenge myself to do all easy and medium level exercises on it, and maybe some hard one if I understand they will not claim much time. Timeline, where every string is one evening, 2-3 hours:
 
@@ -26,7 +26,13 @@ I found JS exercises (actually it is JavaScript Basics course) on HTML Academy w
 > - 4 and 5 chapters, which contained 50 theoretical exercises and 14 practical (just two about functions :C)
 > - Least 6 and 7 chapters, which contained 44 theoretical exercises and 4 practical
 
-Challenge done.
+Challenge completed by 3 evenings.
+
+## Pug/Stylus
+
+#### 00 ¬ Basics
+
+I already know how to write common html tags and css styles, but for improving speed and convenience I started learning Pug template engine and Stylus stylesheet preprocessor.
 
 ## Wanna do
 
