@@ -89,3 +89,42 @@ let threeLetterName = ["Max", "Sam", "Gal", "Joe"];
 const printNames = ([first, second, third, fouth]) => {
   console.log(first, second, third, fouth);
 };
+
+let jason = JSON.stringify(pokemons);
+console.log(jason);
+
+// Exercises
+
+const range = (start, end) => {
+  let output = [];
+  while (start < end) {
+    output.push(start++);
+  }
+  return output;
+};
+
+let aThreeLetterName = ["Max", "Sam", "Gal", "Joe"];
+
+const reverseArray = arr => {
+  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+    let buff = arr[i];
+    arr[i] = arr[arr.length - i - 1];
+    arr[arr.length - i - 1] = buff;
+  }
+  return arr;
+};
+
+console.log(reverseArray(aThreeLetterName));
+
+console.clear();
+
+/* function arrayToList(arr) {
+  if (arr.length) {
+    return let list = { el: arr.shift(), rest: arrayToList(arr) }
+  } else return list;
+} */
+
+function zower(base, exponent) {
+  if (exponent == 0) return 1;
+  else return base * zower(base, exponent - 1);
+}
