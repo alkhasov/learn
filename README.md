@@ -28,6 +28,10 @@ I found JS exercises (actually it is JavaScript Basics course) on HTML Academy w
 
 Challenge completed by 3 evenings.
 
+#### 05 ¬ Ternary conditional, For Of, Spread Syntax
+
+Early I saw ternary conditionals `a > b ? a : b` and did not know how they works, but now I read some and understand them. Spread syntax `...` just surprized me, I undertand how it works, but not much of ideas how to use is. Statement `for of` also new for me, I guess it is pretty useful and replace a lot of traditional loops `for(let i=0; i<a; i++)`
+
 ## Pug/Stylus
 
 #### 00 ¬ Basics
