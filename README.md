@@ -32,9 +32,13 @@ Challenge completed by 3 evenings.
 
 Early I saw ternary conditionals `a > b ? a : b` and did not know how they works, but now I read some and understand them. Spread syntax `...` just surprized me, I undertand how it works, but not much of ideas how to use is. Statement `for of` also new for me, I guess it is pretty useful and replace a lot of traditional loops `for(let i=0; i<a; i++)`
 
-#### 06 ¬ Closures, High-order functions
+#### 06 ¬ Closures, High-order functions and Methods
 
 I'll not hide, I didn't understand closures by the first try, not the second try, only after half an hour I said in mind "Aha, got it", because of things like `[[scope]]` and lexical environment.
+
+#### 07 ¬ Classes and Symbols
+
+Empty
 
 ## Pug/Stylus
 
