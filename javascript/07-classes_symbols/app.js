@@ -196,6 +196,145 @@ class Line {
 }
 
 let line = new Line(50);
-console.log(line.meters);
+// console.log(line.meters);
 line.meters = 6;
-console.log(line.centimeters);
+// console.log(line.centimeters);
+
+class SymmetricMatrix extends Matrix {
+  constructor(size, element = (x, y) => undefined) {
+    super(size, size, (x, y) => {
+      if (x < y) return element(y, x);
+      else return element(x, y);
+    });
+  }
+
+  set(x, y, value) {
+    super.set(x, y, value);
+    if (x != y) {
+      super.set(y, x, value);
+    }
+  }
+}
+
+let matrixA = new SymmetricMatrix(5, (x, y) => `${x},${y}`);
+// console.log(matrixA.get(2, 3));
+
+// console.log(new SymmetricMatrix(2) instanceof SymmetricMatrix);
+// → true
+// console.log(new SymmetricMatrix(2) instanceof Matrix);
+// → true
+// console.log(new Matrix(2, 2) instanceof SymmetricMatrix);
+// → false
+// console.log([1] instanceof Array);
+// → true
+
+class Vec {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  set(x, y) {
+    this.x = x;
+    this.y = y;
+    return this;
+  }
+
+  get() {
+    return { x: this.x, y: this.y };
+  }
+
+  plus(vec) {
+    this.x += vec.x;
+    this.y += vec.y;
+    return this;
+  }
+
+  minus(vec) {
+    this.x -= vec.x;
+    this.y -= vec.y;
+    return this;
+  }
+
+  get length() {
+    return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+  }
+}
+
+let vex = new Vec(1, 2);
+vex.set(3, 4);
+console.log(vex.length);
+
+class Group {
+  constructor() {
+    this.group = [];
+  }
+
+  add(value) {
+    if (this.group.indexOf(value) == -1) {
+      this.group.push(value);
+    }
+  }
+
+  delete(value) {
+    this.group = this.group.filter(el => el !== value && el);
+  }
+
+  has(value) {
+    if (this.group.indexOf(value) != -1) return true;
+    else return false;
+  }
+
+  get(index) {
+    return this.group[index];
+  }
+
+  get length() {
+    return this.group.length;
+  }
+
+  static from(array) {
+    let temp = new Group();
+    for (let a of array) {
+      temp.add(a);
+    }
+    return temp;
+  }
+}
+
+let digits = new Group();
+digits.add(5);
+digits.add(3);
+digits.has(5);
+digits.delete(5);
+digits.has(5);
+
+class GroupIterator {
+  constructor(group) {
+    this.index = 0;
+    this.group = group;
+  }
+
+  next() {
+    if (this.group.length == 0) {
+      return false;
+    } else if (this.group.length == this.index) {
+      return { value: this.group.get(this.index), done: true };
+    } else if (this.index !== 5) {
+      this.index++;
+      return { value: this.group.get(this.index - 1), done: false };
+    } else {
+      return false;
+    }
+  }
+}
+
+Group.prototype[Symbol.iterator] = function() {
+  return new GroupIterator(this);
+};
+
+let grouppe = Group.from([2, 4, 5, 7]);
+
+for (let g of grouppe) {
+  console.log(g);
+}

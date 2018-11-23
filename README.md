@@ -34,11 +34,11 @@ Early I saw ternary conditionals `a > b ? a : b` and did not know how they works
 
 #### 06 ¬ Closures, High-order functions and Methods
 
-I'll not hide, I didn't understand closures by the first try, not the second try, only after half an hour I said in mind "Aha, got it", because of things like `[[scope]]` and lexical environment.
+I'll not hide, I didn't understand closures by the first try, not the second try, only after half an hour I said in mind "Aha, got it", because of things like `[[scope]]` and lexical environment. Partly (I guess) I understood the high-order functions and thinking method of them, just need more practice and look over other's code.
 
 #### 07 ¬ Classes and Symbols
 
-Empty
+I met earlier with object-oriented programming and classes in university, but now I looked at the classes in fresh eye. Was understand how to make new examples of class iterable, I succeeded at the first try but with thoughts "it works, but how?" and only after exercises form book I wrote a new iterable class by memory. I read sections about symbols but quickly forget details of them, need repeat and more practice.
 
 ## Pug/Stylus
 
