@@ -338,3 +338,55 @@ let grouppe = Group.from([2, 4, 5, 7]);
 for (let g of grouppe) {
   console.log(g);
 }
+
+class PGroup extends Group {
+  constructor(def) {
+    super();
+    if (def !== undefined) {
+      this.group = [];
+      for (let a of def.group) this.group.push(a);
+    } else {
+      this.group = [];
+    }
+  }
+
+  add(value) {
+    let temp = new PGroup(this);
+    temp.group.push(value);
+    return temp;
+    //temp.group.push(value);
+  }
+
+  delete(value) {
+    if (this.has(value)) {
+      let temp = new PGroup(this);
+      temp.group.splice(temp.group.indexOf(value), 1);
+      return temp;
+    }
+    return false;
+  }
+
+  has(value) {
+    if (this.group.indexOf(value) !== -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static empty() {
+    return new PGroup();
+  }
+}
+
+let a = new PGroup();
+a = a.add("a");
+let ab = a.add("b");
+let b = ab.delete("a");
+
+console.log(b.has("b"));
+// → true
+console.log(a.has("b"));
+// → false
+console.log(b.has("a"));
+// → false
