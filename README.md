@@ -46,6 +46,16 @@ Earlier in university I met with object-oriented programming and classes, but no
 
 I already know how to write common html tags and css styles, but for improving speed and convenience I started learning Pug template engine and Stylus stylesheet preprocessor.
 
+## React
+
+#### 00 ¬ Hello world
+
+I'm very interest at React last two years at least. JS learnings that I started is fundament and preparing for to start touching React. So, React-Hello-World achievement unlocked.
+
+#### 01 ¬ First app
+
+I looked over create-react-app build setup, run, it works. But I need to back to learn common js and practice more, because I'm not feel ready.
+
 ## Wanna do
 
 - [ ] 1. Refresh my part of programmer's mindset

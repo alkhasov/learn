@@ -17,6 +17,16 @@ gulp.task("watch-js", function() {
   gulp.watch("javascript/**/*").on("change", browserSync.reload);
 });
 
+gulp.task("watch-react", function() {
+  browserSync.init({
+    server: {
+      baseDir: "react"
+    }
+  });
+
+  gulp.watch("react/**/*").on("change", browserSync.reload);
+});
+
 gulp.task("watch", function() {
   browserSync.init({
     server: {
