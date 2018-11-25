@@ -40,6 +40,10 @@ I'll not hide, I didn't understand closures by the first try, not the second try
 
 Earlier in university I met with object-oriented programming and classes, but now I looked at them in fresh eye. Was understand how to make new instances of class iterable, I succeeded at the first try but with thoughts "it works, but how?" and only after exercises form book I wrote a new iterable class by memory. I read sections about symbols but quickly forget details of them, need repeat and more practice.
 
+#### 08 ¬ Errors
+
+Kept looking deeper and now read about `try{} catch{} finally{}` construction with `Error` objects which need to `throw` if flow has exception. Tried to write several, looks easy, but I guess true is not.
+
 ## Pug/Stylus
 
 #### 00 ¬ Basics
