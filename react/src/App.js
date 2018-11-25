@@ -30,3 +30,22 @@ function Movie(props) {
     </div>
   );
 }
+
+class Dropdown extends Component {
+  state = {
+    isOpen: false
+  };
+
+  toggleOpen = () => {
+    this.setState({ isOpen: true });
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.toggleOpen}>Dates</button>
+        {this.state.isOpen && <div>My Content</div>}
+      </div>
+    );
+  }
+}
