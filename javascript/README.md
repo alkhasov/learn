@@ -1,5 +1,3 @@
-**Privet, there! This is repository where Maga Alkhasov collect his steps from journey to learn programming again**
-
 ## JavaScript
 
 #### 00 ¬ Variables
@@ -43,33 +41,3 @@ Earlier in university I met with object-oriented programming and classes, but no
 #### 08 ¬ Errors
 
 Kept looking deeper and now read about `try{} catch{} finally{}` construction with `Error` objects which need to `throw` if flow has exception. Tried to write several, looks easy, but I guess true is not.
-
-## Pug/Stylus
-
-#### 00 ¬ Basics
-
-I already know how to write common html tags and css styles, but for improving speed and convenience I started learning Pug template engine and Stylus stylesheet preprocessor.
-
-## React
-
-_For this learning part each step will be in one folder (react), but steps of journey like earlier will declared below_
-
-#### 00 ¬ Hello world
-
-I'm very interest at React last two years at least. JS learnings that I started is fundament and preparing for to start touching React. So, React-Hello-World achievement unlocked.
-
-#### 01 ¬ First app
-
-I looked over create-react-app build setup, run, it works. But I need to back to learn common js and practice more, because I'm not feel ready... but I could not.
-
-#### 02 ¬ Nested components
-
-I created `class Pokemon` by extends `React.Component`, which calls Pokemon component, need to get used to terminology. Each pokemon has properties form `pokemonsDatabase`. Then I created `Pokemons` component with two instances of `Pokemon` and add click event to `Pokemon` which update instance to new one.
-
-## Wanna do
-
-- [ ] 1. Refresh my part of programmer's mindset
-- [ ] 2. Learn concepts of modern web development
-- [ ] 3. Achieve feel free (40%→90%) in discuss with developers
-- [ ] 4. Make own website
-- [ ] 5. Practice English writing and thinking
