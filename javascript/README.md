@@ -41,3 +41,7 @@ Earlier in university I met with object-oriented programming and classes, but no
 #### 08 ¬ Errors
 
 Kept looking deeper and now read about `try{} catch{} finally{}` construction with `Error` objects which need to `throw` if flow has exception. Tried to write several, looks easy, but I guess true is not.
+
+#### 09 ¬ Regular Expressions
+
+Powerful and painful, hate because I can't quickly write regexp that I want, love when regexp work extaclty like to need.
