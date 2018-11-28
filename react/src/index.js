@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import Pokemon from "./Pokemon.js";
+import Pokemons from "./Pokemon.js";
+import Welcome from "./Welcome.js";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<Pokemon />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 /* const place = document.getElementById("after");
 ReactDOM.render(<Pokemon />, place); */

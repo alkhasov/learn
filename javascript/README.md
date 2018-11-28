@@ -44,4 +44,4 @@ Kept looking deeper and now read about `try{} catch{} finally{}` construction wi
 
 #### 09 ¬ Regular Expressions
 
-Powerful and painful, hate because I can't quickly write regexp that I want, love when regexp work extaclty like to need.
+Powerful and painful. Hate when can't quickly write regexp that I want, love when regexp work extaclty like I need.

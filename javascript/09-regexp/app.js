@@ -90,3 +90,13 @@ const getDate = str => {
 };
 
 console.log(getDate("280-11-2018"));
+
+console.log("\nH", /pare/.test("preparepa"));
+console.log("H", /\bpare\b/.test("preparepa"));
+
+let fruitsArr = /\b\d+ (lemon|apple|grape)s?\b/;
+
+console.log("\nJ", fruitsArr.test("10 apples"));
+console.log("J", fruitsArr.test("1 grape"));
+console.log("J", fruitsArr.test("2 peaches"));
+console.log("J", fruitsArr.test("lemons"));

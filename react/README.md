@@ -14,6 +14,10 @@ I looked over create-react-app build setup, run, it works. But I need to back to
 
 I created `class Pokemon` by extends `React.Component`, which calls Pokemon component, need to get used to terminology. Each pokemon has properties form `pokemonsDatabase`. Then I created `Pokemons` component with two instances of `Pokemon` and add click event to `Pokemon` which update instance to new one.
 
+#### 03 ¬ Props and State
+
+Coded little bit more complex components with generating childres form "database", add evenlisteners `onClick`. Worked with lists and keys.
+
 ## create-react-app scripts
 
 ### `yarn start`

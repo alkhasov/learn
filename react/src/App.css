@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: left;
+  flex-wrap: wrap;
 }
 
 .App-logo {
@@ -41,8 +42,8 @@
   display: inline-block;
   background: #f2f2f2;
   padding: 30px 10px 10px 10px;
-  margin: 10px;
-  width: 250px;
+  margin: 10px 0px 10px 10px;
+  width: 225px;
   height: 100%;
   overflow: hidden;
 }
@@ -50,4 +51,23 @@
 .pokemon:hover {
   cursor: pointer;
   background: #ebebeb;
+}
+
+.movie img {
+  max-height: 200px;
+}
+
+.movie {
+  padding: 30px 10px 10px 10px;
+  margin: 10px 0px 10px 10px;
+  text-align: left;
+}
+
+.movie h1 {
+  margin: 5px 0px;
+}
+
+.movie h3 {
+  color: #999999;
+  margin: 5px 0px;
 }

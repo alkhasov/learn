@@ -50,6 +50,10 @@ Kept looking deeper and now read about `try{} catch{} finally{}` construction wi
 
 I already know how to write common html tags and css styles, but for improving speed and convenience I started learning Pug template engine and Stylus stylesheet preprocessor.
 
+#### 09 ¬ Regular Expressions
+
+Powerful and painful. Hate when can't quickly write regexp that I want, love when regexp work extaclty like I need.
+
 ## React
 
 _For this learning part each step will be in one folder (react), but steps of journey like earlier will declared below_
@@ -65,6 +69,10 @@ I looked over create-react-app build setup, run, it works. But I need to back to
 #### 02 ¬ Nested components
 
 I created `class Pokemon` by extends `React.Component`, which calls Pokemon component, need to get used to terminology. Each pokemon has properties form `pokemonsDatabase`. Then I created `Pokemons` component with two instances of `Pokemon` and add click event to `Pokemon` which update instance to new one.
+
+#### 03 ¬ Props and State
+
+Coded little bit more complex components with generating childres form "database", add evenlisteners `onClick`. Worked with lists and keys.
 
 ## Wanna do
 

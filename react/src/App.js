@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-class App extends Component {
+/* class App extends Component {
   render() {
     return (
       <div className="App">
@@ -13,11 +13,9 @@ class App extends Component {
       </div>
     );
   }
-}
+} */
 
-export default App;
-
-// src/App.js
+/* // src/App.js
 function Img(props) {
   return <img src={props.src} className={props.className} alt={props.alt} />;
 }
@@ -32,7 +30,7 @@ function Movie(props) {
 }
 
 class Dropdown extends Component {
-  state = {
+  state = {s
     isOpen: false
   };
 
@@ -48,4 +46,52 @@ class Dropdown extends Component {
       </div>
     );
   }
+} */
+
+const moviesDatabase = [
+  {
+    id: 1,
+    title: "Widows",
+    posterUrl:
+      "https://a.ltrbxd.com/resized/film-poster/3/3/6/0/6/6/336066-widows-0-230-0-345-crop.jpg",
+    year: 2018,
+    director: "Steve McQueen"
+  },
+  {
+    id: 2,
+    title: "A Serious Man",
+    posterUrl:
+      "https://a.ltrbxd.com/resized/sm/upload/2u/48/o1/04/kCl9WXR7LOqDTEU3XUX8ssUETQR-0-150-0-225-crop.jpg",
+    year: 2009,
+    director: "Adam Chitwood"
+  }
+];
+
+class Movie extends Component {
+  render() {
+    let movie = this.props.data;
+    return (
+      <div className="movie">
+        <img src={movie.posterUrl} alt={movie.title} />
+        <h1>{movie.title}</h1>
+        <h3>
+          {movie.director}, {movie.year}
+        </h3>
+      </div>
+    );
+  }
 }
+
+class Movies extends Component {
+  render() {
+    return (
+      <div className="App">
+        {moviesDatabase.map(el => (
+          <Movie data={el} key={el.id} />
+        ))}
+      </div>
+    );
+  }
+}
+
+export default Movies;
