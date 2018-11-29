@@ -23,7 +23,7 @@ class Welcome extends React.Component {
     let button;
 
     if (isLoggedIn) {
-      button = <Button onClick={this.toggleLogin} />;
+      button = <Button onClick={this.toggleLogin} logout />;
     } else {
       button = <Button onClick={this.toggleLogin} />;
     }

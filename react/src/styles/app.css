@@ -57,6 +57,10 @@
   max-height: 200px;
 }
 
+.watched>h1 {
+  color: #999999;
+}
+
 .movie {
   padding: 30px 10px 10px 10px;
   margin: 10px 0px 10px 10px;
