@@ -74,6 +74,10 @@ I created `class Pokemon` by extends `React.Component`, which calls Pokemon comp
 
 Coded little bit more complex components with generating childres form "database", add evenlisteners `onClick`. Worked with lists and keys.
 
+#### 04 ¬ Styled Components and React Router
+
+Styled components just surprised me about how they handy to use. Don't know about large projects but for small experiments it's just perfect solution. React router surprised me too, I thought even simple router is hard to code, but with [react-router-dom](https://github.com/ReactTraining/react-router) package it's simple as can be.
+
 ## Wanna do
 
 - [ ] 1. Refresh my part of programmer's mindset

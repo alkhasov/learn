@@ -2,14 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
 import App from "./App";
-import Pokemons from "./pages/Pokemon.js";
-import Welcome from "./pages/Welcome.js";
-import Form from "./pages/Form.js";
-import Calc from "./pages/Calc.js";
-import Tasker from "./pages/Tasker.js";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<Tasker />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 /* const place = document.getElementById("after");
 ReactDOM.render(<Pokemon />, place); */

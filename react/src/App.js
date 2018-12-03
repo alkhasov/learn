@@ -1,6 +1,14 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import styled from "styled-components";
+
 import "./styles/app.css";
+
+import Pokemons from "./pages/Pokemon.js";
+import Welcome from "./pages/Welcome.js";
+import Form from "./pages/Form.js";
+import Calc from "./pages/Calc.js";
+import Conditioner from "./pages/Conditioner.js";
 
 /* class App extends Component {
   render() {
@@ -116,4 +124,63 @@ class Movies extends Component {
   }
 }
 
-export default Movies;
+const Bar = styled.div`
+  padding: 15px 0;
+  border-bottom: 1px solid #f2f2f2;
+  a {
+    margin-left: 10px;
+    color: black;
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &:active {
+      color: #999;
+    }
+  }
+`;
+
+const Page = styled.div`
+  margin-left: 20px;
+`;
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <Bar>
+            <a>
+              <Link to="/pokemons">Pokemons</Link>
+            </a>
+            <a>
+              <Link to="/welcome">Welcome</Link>
+            </a>
+            <a>
+              <Link to="/form">Form</Link>
+            </a>
+            <a>
+              <Link to="/movies">Movies</Link>
+            </a>
+            <a>
+              <Link to="/conditioner">Conditioner</Link>
+            </a>
+          </Bar>
+          <Page>
+            <Switch>
+              <Route path="/pokemons" component={Pokemons} />
+              <Route path="/welcome" component={Welcome} />
+              <Route path="/form" component={Form} />
+              <Route path="/movies" component={Movies} />
+              <Route path="/conditioner" component={Conditioner} />
+            </Switch>
+          </Page>
+        </div>
+      </Router>
+    );
+  }
+}
+
+export default App;
