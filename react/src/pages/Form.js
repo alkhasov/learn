@@ -28,13 +28,21 @@ const MaxLevel = props => {
     return <Message red>Negative level, are you sure?</Message>;
   } else {
     let reach = 5 - level;
-    return (
-      <p>
-        Pokemon can reach {reach} {reach === 1 ? "level" : "levels"} more.
-      </p>
-    );
+    let message = `Pokemon can reach ${reach} ${
+      reach === 1 ? "level" : "levels"
+    } more.`;
+    return <p>{message}</p>;
   }
 };
+
+const Button = styled.button`
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  &:active {
+    font-size: 15px;
+  }
+`;
 
 class Form extends Component {
   constructor(props) {
@@ -48,13 +56,14 @@ class Form extends Component {
   };
 
   handleSubmit = event => {
-    alert("A name was submitted: " + this.state.value);
+    alert("Current level is " + this.state.level);
     event.preventDefault();
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        <br />
         <fieldset>
           <legend>Pokemon levels</legend>
           <br />
@@ -67,6 +76,9 @@ class Form extends Component {
             id="name"
           />
           <MaxLevel level={this.state.level} />
+          <Button type="submit" onClick={this.handleSubmit}>
+            Submit
+          </Button>
         </fieldset>
       </form>
     );

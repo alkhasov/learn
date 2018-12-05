@@ -9,6 +9,7 @@ import Welcome from "./pages/Welcome.js";
 import Form from "./pages/Form.js";
 import Calc from "./pages/Calc.js";
 import Conditioner from "./pages/Conditioner.js";
+import List from "./pages/List.js";
 
 /* class App extends Component {
   render() {
@@ -152,29 +153,23 @@ class App extends Component {
       <Router>
         <div>
           <Bar>
-            <a>
-              <Link to="/pokemons">Pokemons</Link>
-            </a>
-            <a>
-              <Link to="/welcome">Welcome</Link>
-            </a>
-            <a>
-              <Link to="/form">Form</Link>
-            </a>
-            <a>
-              <Link to="/movies">Movies</Link>
-            </a>
-            <a>
-              <Link to="/conditioner">Conditioner</Link>
-            </a>
+            <Link to="/pokemons">Pokemons</Link>
+            <Link to="/welcome">Welcome</Link>
+            <Link to="/form">Form</Link>
+            <Link to="/movies">Movies</Link>
+            <Link to="/calc">Calc</Link>
+            <Link to="/conditioner">Conditioner</Link>
+            <Link to="/list">List</Link>
           </Bar>
           <Page>
             <Switch>
               <Route path="/pokemons" component={Pokemons} />
               <Route path="/welcome" component={Welcome} />
               <Route path="/form" component={Form} />
+              <Route path="/calc" component={Calc} />
               <Route path="/movies" component={Movies} />
               <Route path="/conditioner" component={Conditioner} />
+              <Route path="/list" component={List} />
             </Switch>
           </Page>
         </div>

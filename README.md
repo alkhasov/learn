@@ -44,15 +44,17 @@ Earlier in university I met with object-oriented programming and classes, but no
 
 Kept looking deeper and now read about `try{} catch{} finally{}` construction with `Error` objects which need to `throw` if flow has exception. Tried to write several, looks easy, but I guess true is not.
 
+#### 09 ¬ Regular Expressions
+
+Powerful and painful. Hate when can't quickly write regexp that I want, love when regexp work extaclty like I need.
+
 ## Pug/Stylus
 
 #### 00 ¬ Basics
 
 I already know how to write common html tags and css styles, but for improving speed and convenience I started learning Pug template engine and Stylus stylesheet preprocessor.
 
-#### 09 ¬ Regular Expressions
-
-Powerful and painful. Hate when can't quickly write regexp that I want, love when regexp work extaclty like I need.
+_Currently I freezed my learingo of pug and stylus, but still like them both_
 
 ## React
 
