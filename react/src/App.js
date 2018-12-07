@@ -10,6 +10,7 @@ import Form from "./pages/Form.js";
 import Calc from "./pages/Calc.js";
 import Conditioner from "./pages/Conditioner.js";
 import List from "./pages/List.js";
+import Sports from "./pages/Sports.js";
 
 /* class App extends Component {
   render() {
@@ -160,6 +161,7 @@ class App extends Component {
             <Link to="/calc">Calc</Link>
             <Link to="/conditioner">Conditioner</Link>
             <Link to="/list">List</Link>
+            <Link to="/sports">Sports</Link>
           </Bar>
           <Page>
             <Switch>
@@ -170,6 +172,7 @@ class App extends Component {
               <Route path="/movies" component={Movies} />
               <Route path="/conditioner" component={Conditioner} />
               <Route path="/list" component={List} />
+              <Route path="/sports" component={Sports} />
             </Switch>
           </Page>
         </div>

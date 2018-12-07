@@ -80,6 +80,10 @@ Coded little bit more complex components with generating childres form "database
 
 Styled components just surprised me about how they handy to use. Don't know about large projects but for small experiments it's just perfect solution. React router surprised me too, I thought even simple router is hard to code, but with [react-router-dom](https://github.com/ReactTraining/react-router) package it's simple as can be.
 
+#### 05 ¬ Lifting state up
+
+At the start of this step I knew about react elements but not much about how to use them for usefull things. For fill the gap I coded the page with table which has header rows and common rows, search field and filter option. Table may any size and any count of ony rows. Search and filter functionality follows the "source of truth" clue, I used hierarchy of nested props for lifting state up.
+
 ## Wanna do
 
 - [ ] 1. Refresh my part of programmer's mindset
