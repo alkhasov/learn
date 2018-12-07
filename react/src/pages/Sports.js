@@ -109,11 +109,19 @@ class SearchBar extends Component {
   }
 }
 
+const Red = styled.td`
+  color: red;
+`;
+
 class ProductRow extends Component {
   render() {
     return (
       <tr>
-        <td>{this.props.cells.name}</td>
+        {!this.props.cells.stocked ? (
+          <Red>{this.props.cells.name}</Red>
+        ) : (
+          <td>{this.props.cells.name}</td>
+        )}
         <td>{this.props.cells.price}</td>
       </tr>
     );

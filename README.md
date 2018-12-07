@@ -54,7 +54,7 @@ Powerful and painful. Hate when can't quickly write regexp that I want, love whe
 
 I already know how to write common html tags and css styles, but for improving speed and convenience I started learning Pug template engine and Stylus stylesheet preprocessor.
 
-_Currently I freezed my learingo of pug and stylus, but still like them both_
+_Currently I freezed my learing of pug and stylus, but still like them both_
 
 ## React
 
