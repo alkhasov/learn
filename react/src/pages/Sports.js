@@ -135,15 +135,14 @@ const Head = styled.th`
 
 class ProductCategory extends Component {
   render() {
-    const rows = this.props.rows.map(row => (
-      <ProductRow key={newKey(row.name)} cells={row} />
-    ));
     return (
       <tbody>
         <tr>
           <Head>{this.props.head}</Head>
         </tr>
-        {rows}
+        {this.props.rows.map(row => (
+          <ProductRow key={newKey(row.name)} cells={row} />
+        ))}
       </tbody>
     );
   }
