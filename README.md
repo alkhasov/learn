@@ -88,7 +88,7 @@ At the start of this step I knew about react elements but not much about how to 
 
 #### 01 ¬ Start with Express
 
-#### 02 ¬ Connect to File Server
+So, truth is I tried express.js earlier, approximately 4 years ago, when I found node.js, but truth also is I forgot everything, that's why I have to achieve «Hello, world!» again.
 
 ## Wanna do
 
