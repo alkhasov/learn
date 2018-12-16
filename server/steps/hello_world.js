@@ -8,6 +8,7 @@ app.get("/", (req, res) => res.send("Privet, mir!"));
 
 app.listen(port, () =>
   console.log(
-    `Server from ${path.basename(__filename)} running on port ${port}`
+    `\x1b[1m`,
+    `${path.basename(__filename)} based server are running on port ${port}`
   )
 );

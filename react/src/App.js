@@ -11,6 +11,7 @@ import Calc from "./pages/Calc.js";
 import Conditioner from "./pages/Conditioner.js";
 import List from "./pages/List.js";
 import Sports from "./pages/Sports.js";
+import GetList from "./pages/GetList.js";
 
 /* class App extends Component {
   render() {
@@ -162,6 +163,7 @@ class App extends Component {
             <Link to="/conditioner">Conditioner</Link>
             <Link to="/list">List</Link>
             <Link to="/sports">Sports</Link>
+            <Link to="/getlist">GetList</Link>
           </Bar>
           <Page>
             <Switch>
@@ -173,6 +175,7 @@ class App extends Component {
               <Route path="/conditioner" component={Conditioner} />
               <Route path="/list" component={List} />
               <Route path="/sports" component={Sports} />
+              <Route path="/getlist" component={GetList} />
             </Switch>
           </Page>
         </div>

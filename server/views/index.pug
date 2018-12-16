@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+  head
+    link(rel="stylesheet", href="public/style.css")
+  body
+    h4 Post request tester
+    form(method='POST', action='/post')
+      label(for='given_name') Given Name
+      input#given_name(type='text', name='given_name')
+      label(for='family_name') Family Name
+      input#family_name(type='text', name='family_name')
+      input(type='submit', value='Send')
+    #output
+      if result
+        h3(class=result.style) #{result.header}
+        p #{result.desc}

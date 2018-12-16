@@ -26,6 +26,10 @@ Styled components just surprised me about how they handy to use. Don't know abou
 
 At the start of this step I knew about react elements but not much about how to use them for usefull things. For fill the gap I coded the page with table which has header rows and common rows, search field and filter option. Table may any size and any count of ony rows. Search and filter functionality follows the "source of truth" clue, I used hierarchy of nested props for lifting state up.
 
+#### 06 ¬ Fetching data
+
+Started trying to requsest data from local server.
+
 ## create-react-app scripts
 
 ### `yarn start`

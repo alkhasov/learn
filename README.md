@@ -90,6 +90,10 @@ At the start of this step I knew about react elements but not much about how to 
 
 So, truth is I tried express.js earlier, approximately 4 years ago, when I found node.js, but truth also is I forgot everything, that's why I have to achieve «Hello, world!» again.
 
+#### 02 ¬ Routing
+
+Build several `GET`,`POST` routes, logged send information. Emulated database with variable on server. Found Paw application for generating requests and collecting API.
+
 ## Wanna do
 
 - [ ] 1. Refresh my part of programmer's mindset
