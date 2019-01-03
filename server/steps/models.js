@@ -58,15 +58,150 @@ const updatePokemon = function() {
   });
 };
 
-Pokemon.findOne({ name: 'Billy' }, (err, pokemon) => {
-  err && console.error(err);
-  !pokemon && console.error(`No matches`);
-  console.log(pokemon);
+const errorHandler = (res, msg) => {};
 
-  pokemon.level += 1;
-  pokemon.save((err, updatedPokemon) => {
-    err && console.error(err);
-    console.log(updatedPokemon);
+app.post('/find', (req, res, next) => {
+  console.log(req.body);
+  if (!req.body.name) {
+    res
+      .status(400)
+      .send(`Bad request or param`)
+      .end();
+    return;
+  }
+
+  Pokemon.findOne({ name: req.body.name }, (err, pokemon) => {
+    if (err) {
+      res.send(`Not found such pokemon`);
+      return;
+    }
+    if (!pokemon) {
+      res.send(`Not found such pokemon`);
+      return;
+    }
+    console.log(pokemon);
+
+    pokemon.level += 1;
+    pokemon.save((err, updatedPokemon) => {
+      err && console.error(err);
+      res.status(201).send(updatedPokemon);
+    });
+  });
+});
+
+const entitySchema = new mongoose.Schema({
+  _folder: {
+    type: String,
+    required: true
+  },
+  route: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  date_create: {
+    type: Date,
+    default: Date.now
+  },
+  date_lastEdit: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+const Entity = new mongoose.model('Entity', entitySchema);
+
+const About = new Entity(
+  { _folder: 'personal', route: '/about', name: 'about', title: 'About' },
+  err => err && console.error(err)
+);
+//About.save();
+
+const Personal = new Entity({
+  _folder: '~',
+  route: '/~',
+  name: 'personal',
+  title: 'Personal'
+});
+
+//Personal.save();
+
+Entity.find({ name: /./ }, (err, entities) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  //console.log(entities);
+});
+
+/* app.get('/:page', (req, res, next) => {
+  const page = req.params.page.toLowerCase();
+  console.log(page);
+  Entity.find({ name: page }, (err, page) => {
+    if (err) {
+      res.status(500).send(err);
+      return;
+    }
+    if (!page) {
+      res.status(400).send(`Out of page`);
+      return;
+    }
+    if (page._folder != '~') {
+      Entity.findOne({ name: page._folder }, (err, folder) => {
+        res.status(200).send({
+          _up: folder.route,
+          _route: page.route,
+          title: page.title,
+          folder: folder.title
+        });
+      });
+    } else console.error(`root detected`);
+  });
+}); */
+
+app.get('/routes', (req, res, next) => {
+  Entity.find({ name: /[a-zA-Z]/ }, (err, pages) => {
+    if (err) {
+      res.status(500).send(err);
+      return;
+    }
+    if (!pages) {
+      res.status(400).send(`Out of page`);
+      return;
+    }
+    const routes = pages.map(p => {
+      page =>
+        async function(page) {
+          if (page._folder != '~') {
+            let upFolder = {};
+            await Entity.findOne({ name: page._folder }, (err, folder) => {
+              upFolder = folder;
+            });
+            return {
+              _up: upFolder.route,
+              _route: page.route,
+              title: page.title,
+              folder: upFolder.title
+            };
+            /*         console.log(page._folder);
+        Entity.findOne()
+          .where('name')
+          .gt(page._folder)
+          .exec((err, pa) => console.log(`dsddd`, pa)); */
+          } else {
+            return false;
+          }
+        };
+    });
+    console.log(routes);
+    res.send(routes);
   });
 });
 
