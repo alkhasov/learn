@@ -114,6 +114,15 @@ const isPowerOfThree = num => {
 
 console.log(`6; isPowerOfThree`, isPowerOfThree(27));
 
+/*
+console.log(`81 true`, isPowerOfThree(81));
+console.log(`3 true`, isPowerOfThree(3));
+console.log(`15 false`, isPowerOfThree(15));
+console.log(`27 trus`, isPowerOfThree(27));
+console.log(`124115 false`, isPowerOfThree(124115));
+console.log(`${81 * 3} true`, isPowerOfThree(81 * 3));
+*/
+
 //ackermann function
 
 const ackermann = (m, n) => {

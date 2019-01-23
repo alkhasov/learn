@@ -49,3 +49,7 @@ Powerful and painful. Hate when can't quickly write regexp that I want, love whe
 #### 10 ¬ Hexlet Basics
 
 Found a new source of knowledge about JS, now it's in Russian and I guess that help to improve speed, but I need to find out new interesting readings too for English practice. I'll little bit repeat some steps (because there is no ability to skip) and after them will do a lot of new exercises.
+
+#### 11 ¬ Hexlet Challages #2
+
+Sixteen mini-challenges for the beginners from [ru.hexlet.io/courses/introduction_to_programming](https://ru.hexlet.io/courses/introduction_to_programming) (RU)
