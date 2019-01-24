@@ -60,6 +60,65 @@ const invertCase = str => {
 
 console.log(`#4 coNvERtcAsE!1`, invertCase('coNvERtcAsE!1'));
 
+//reverse integer https://ru.hexlet.io/challenges/programming_basics_reverse_integer
+
+const reverseInt = num => {
+  if (num === 0) return 0;
+  let isPositive = 1;
+  if (num < 0) isPositive = -1;
+  return (
+    Number(
+      String(num * isPositive)
+        .split('')
+        .reduce((acc, curr) => curr + acc)
+    ) * isPositive
+  );
+};
+
+console.log(`#5 reverse integer -1235`, reverseInt(-1235));
+
+//reverse str https://ru.hexlet.io/challenges/programming_basics_reverse_string
+
+const reverseStr = str => {
+  return str.split('').reduce((acc, curr) => curr + acc);
+};
+
+console.log(`#6 reverse string`, reverseStr('reverse string'));
+
+//export default reverseStr;
+
+//dna to rna converter https://ru.hexlet.io/challenges/programming_basics_rna
+
+const dnaToRna = dna => {
+  const convertSquence = {
+    G: 'C',
+    C: 'G',
+    T: 'A',
+    A: 'U'
+  };
+  return dna
+    .split('')
+    .map(piece => convertSquence[piece])
+    .join('');
+};
+
+console.log(`#7 dna to rna converter, ACGTGGTCTTAA`, dnaToRna('ACGTGGTCTTAA'));
+
+//square sum https://ru.hexlet.io/challenges/intro_to_programming_sum_square_difference
+
+const sumSquareDifference = n => {
+  let sumOfSquares = 0;
+  let sum = 0;
+  for (let i = 0; i <= n; i += 1) {
+    sum += i;
+    sumOfSquares += i ** 2;
+  }
+  // console.log(sum ** 2, sumOfSquares);
+  return sum ** 2 - sumOfSquares;
+};
+
+console.log(`#8 sum square diff, 10`, sumSquareDifference(15));
+
 //diff angle
 
 const diff = (angleA, angleB, print) => {

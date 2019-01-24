@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Maga Alkhasov <account@musewick.com>",
   "license": "MIT",
+  "scripts": {
+    "watch-js": "gulp watch-js"
+  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.3",
