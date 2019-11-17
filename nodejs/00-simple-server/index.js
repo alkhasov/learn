@@ -3,13 +3,16 @@ const fs = require('fs');
 
 const server = http.createServer((req, res) => {
   const { url, method } = req;
+
   if (url === '/status') {
     res.statusCode = 200;
     res.write('Server is online');
     return res.end();
   }
+
   if (url === '/form') {
     res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
     res.write(`
       <html><body>
       <form action="/message" method="POST">
@@ -20,12 +23,14 @@ const server = http.createServer((req, res) => {
     `);
     return res.end();
   }
-  if (url === '/message') {
+
+  if (url === '/message' && method === 'POST') {
     console.log('Request received');
     res.statusCode = 302;
     res.setHeader('Location', '/');
     return res.end();
   }
+
   res.setHeader('Content-Type', 'text/html');
   res.write('<html><body>');
   res.write(
