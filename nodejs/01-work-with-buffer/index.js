@@ -1,5 +1,4 @@
 const http = require('http');
-const fs = require('fs');
 
 const serverSettings = { port: 3000, hostname: 'localhost' };
 
