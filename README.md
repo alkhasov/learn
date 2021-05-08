@@ -24,7 +24,7 @@ Gods hand
 
 #### Svelte
 
-"front-end compiler?"
+"front-end compiler"?
 
 ## Why I started first time
 
