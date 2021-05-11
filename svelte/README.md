@@ -17,3 +17,5 @@ Svelte uses a pinch of sugar with logic operators. It's look like wrapping commo
 #### 03 ¬ Events
 
 Handling events quite easy, but tutorial has no proper pracite to reinforce knowledge. I had some struggle with forwarding events and with understanding what `stopPropagation` is.
+
+#### 04 ¬ Bindings
